@@ -1,0 +1,36 @@
+$fontSizeGeneral: 18px;
+
+html {
+    box-sizing: border-box;
+    font-size: $fontSizeGeneral;
+    margin: 0px;
+    padding: 0px;
+}
+
+*,*:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+}
+
+//Media Queries
+$mq-1440-up: "only screen and (min-width: 1440px)";  //Desktop version
+$mq-375-up: "only screen and (min-width: 375px)";  //Mobile version
+$mq-375-up: "only screen and (min-width: 375px)";  
+$mq-1000-up: "only screen and (min-width: 1000px)";  
+
+//Helper Classes
+.wrapper {
+
+    padding: 36px 30px 0px;
+
+    @media #{$mq-1000-up}{
+        padding: 60px 80px 0px;
+    }
+
+    @media #{$mq-1440-up}{
+        padding: 60px 165px 0px;
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Coaw Lin",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "postcss-modules": "^1.4.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.8",
+    "sass": "^1.23.0-module.beta.1"
+  }
+}

@@ -1,0 +1,112 @@
+.menu-toggle{
+}
+
+
+.menu-toggle div {
+    margin: 5px 0;
+    width: 33px;
+    height: 3px;
+    background-color: $veryDarkBlue;
+    transform-origin: 50% 50%;
+    border-radius: 30%;
+
+    @media #{$mq-1000-up}{
+        display: none;
+    }
+}
+
+//Style the menu when the menu is being toggled forward animation (active)
+.menu-toggle .line-one{
+    &.forward{
+        animation-name: lineOneForward;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+    }
+
+    &.reverse{
+        animation-name: lineOneReverse;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+.menu-toggle .line-two{
+    &.forward{  
+        background-color: $lightGrayishBlue;
+    }
+    &.reverse{  
+        background-color: $veryDarkBlue;
+    }
+}
+
+.menu-toggle .line-three{
+    &.forward{
+        animation-name: lineThreeForward;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+    }
+    &.reverse{
+        animation-name: lineThreeReverse;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+/*Animation for which the menu icon is toggled*/
+@keyframes lineOneForward {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(8px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(8px) rotate(135deg);
+    }
+}
+
+@keyframes lineThreeForward {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-8px) rotate(225deg);
+    }
+}
+
+/*Animation for which the menu icon is toggled again during showing cross*/
+@keyframes lineOneReverse {
+    0% {
+        transform: translateY(8px) rotate(135deg);
+    }
+
+    50% {
+        transform: translateY(8px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes lineThreeReverse {
+    0% {
+        transform: translateY(-8px) rotate(225deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
