@@ -1,0 +1,43 @@
+$globalFontSize: 18px;
+$desktopMaxWidth: 48%;
+$mobileMaxWidth: 90%;
+
+$mq-1200-up: "only screen and (min-width: 1200px)"; 
+$mq-375-up: "only screen and (min-width: 375px)";
+$mq-650-up: "only screen and (min-width: 650px)"; //for button
+$mq-1000-up: "only screen and (min-width: 992px)";  
+
+
+*, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 400;
+    font-size: $globalFontSize;
+}
+
+h1, h2, h3{
+    color: $darkGrayishBlue;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 1.8rem;
+    @media #{$mq-1000-up}{
+        font-size: 2rem;
+    }   
+}
+
+p{
+    color: $grayishBlue;
+    line-height: 30px;
+    font-size: $globalFontSize;
+    font-size: 1.1rem;
+    @media #{$mq-1000-up}{
+        font-size: 1.2rem;
+    }   
+}
